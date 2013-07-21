@@ -5,7 +5,8 @@
 	  var defaults = {
             linkClassName: "pdf-link",
 			formClassName: "form-submit",
-			flag: 0
+			flag: 0,
+			grabAllOfThem: false
 	  };
 	  
 
@@ -18,7 +19,7 @@
 				{
 				
 
-					if($(e.target).hasClass(settings.linkClassName))
+					if(settings.grabAllOfThem || $(e.target).hasClass(settings.linkClassName))
 					{
 						e.preventDefault();  
 						
