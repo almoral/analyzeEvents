@@ -6,7 +6,7 @@
             linkClassName: "pdf-link",
 			formClassName: "form-submit",
 			flag: 0,
-			grabAllOfThem: false
+			checkForClass: true
 	  };
 	  
 
@@ -19,7 +19,7 @@
 				{
 				
 
-					if(settings.grabAllOfThem || $(e.target).hasClass(settings.linkClassName))
+					if(!settings.checkForClass || $(e.target).hasClass(settings.linkClassName))
 					{
 						e.preventDefault();  
 						
